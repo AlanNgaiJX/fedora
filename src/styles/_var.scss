@@ -1,0 +1,113 @@
+$hd: 1px; // 基本单位
+
+// 文字色
+$color-text-base: #000; // 基本
+$color-text-base-inverse: #fff; // 基本 - 反色
+$color-text-secondary: #a4a9b0; // 辅助色
+$color-text-placeholder: #bbb; // 文本框提示
+$color-text-disabled: #bbb; // 失效
+$color-text-caption: #888; // 辅助描述
+$color-text-paragraph: #333; // 段落
+
+// 背景色
+$fill-base: #fff; // 组件默认背景
+$fill-body: #f5f5f9; // 页面背景
+$fill-tap: #ddd; // 组件默认背景 - 按下
+$fill-disabled: #ddd; // 通用失效背景
+$fill-mask: rgba(0, 0, 0, 0.4); // 遮罩背景
+$color-icon-base: #ccc; // 许多小图标的背景，比如一些小圆点，加减号
+$fill-grey: #f7f7f7;
+$fill-deep-grey: #BFBFBF;
+// 圆角
+// ---
+$radius-xs: 2 * $hd;
+$radius-sm: 3 * $hd;
+$radius-md: 5 * $hd;
+$radius-lg: 7 * $hd;
+$radius-round: 100 * $hd;
+$radius-circle: 50%;
+$border-radius: 4px; //设置圆角
+$border-color: #dcdfe6;
+
+$default: #ffffff;
+$primary: #409eff; // 各种颜色
+$success: #67c23a;
+$warning: #e6a23c;
+$danger: #f56c6c;
+$info: #909399;
+
+$default-hover: #ffffff;
+$primary-hover: #66b1ff; // 鼠标移入的颜色
+$success-hover: #85ce61;
+$warning-hover: #ebb563;
+$danger-hover: #f78989;
+$info-hover: #a6a9ad;
+
+$default-active: #ffffff;
+$primary-active: #3a8ee6; // 激活的颜色
+$success-active: #5daf34;
+$warning-active: #cf9236;
+$danger-active: #dd6161;
+$info-active: #82848a;
+
+$primary-bg: #E7F7FF; // 各种颜色
+
+
+$default-shadow: 1px 2px 5px 0 rgba(167, 167, 167, 0.5);
+$default-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+/* 清空默认样式 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, button, textarea {
+  outline: none;
+}
+
+body, input, button {
+  font-family: "Microsoft YaHei","Lantinghei SC","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 清空默认样式 end */
+
+/* mini滚动条 */
+.mini-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+.mini-scroll::-webkit-scrollbar-button{
+  display: none;
+}
+.mini-scroll::-webkit-scrollbar-track{
+  background:#fff;
+}
+.mini-scroll::-webkit-scrollbar-track-piece{
+  background: #fff;
+  /* box-shadow: inset 1px 1px 5px #ddd; */
+}
+.mini-scroll::-webkit-scrollbar-thumb{
+  background:#ddd;
+  border: solid 2px #fff;
+  /* border-image: linear-gradient(90deg, #ddd,#fff) 20; */
+  border-radius: 10px;
+}
+.mini-scroll::-webkit-scrollbar-corner{
+  background:#fff;
+}
+.mini-scroll::-webkit-scrollbar-resizer{
+  background:#fff;
+}
+/* mini滚动条 end */
