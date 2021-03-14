@@ -76,7 +76,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .fe-menu-item {
   cursor: pointer;

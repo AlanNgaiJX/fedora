@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 22:55:42
- * @LastEditTime: 2021-03-13 14:18:14
+ * @LastEditTime: 2021-03-14 21:42:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/input/input.vue
@@ -194,7 +194,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .fe-input {
   .detail {

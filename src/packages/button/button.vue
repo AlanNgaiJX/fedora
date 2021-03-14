@@ -31,13 +31,9 @@
 
 <script>
 import { defineComponent } from 'vue';
-import Icon from './icon.vue';
 
 export default defineComponent({
   name: 'fe-button',
-  components: {
-    'fe-icon': Icon,
-  },
   props: {
     type: {
       type: String,

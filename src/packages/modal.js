@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-03-14 11:42:32
- * @LastEditTime: 2021-03-14 20:57:30
+ * @LastEditTime: 2021-03-14 21:39:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/modal.js
  */
 import { createApp } from 'vue';
-import Icon from './icon.vue';
+import Icon from './icon/icon.vue';
 import Toast from './toast/toast.vue';
 import Loading from './loading/loading.vue';
 import Spin from './spin/spin.vue';

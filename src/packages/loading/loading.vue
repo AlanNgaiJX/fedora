@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 11:32:56
- * @LastEditTime: 2021-03-14 20:56:49
+ * @LastEditTime: 2021-03-14 21:43:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/loading/loading.vue
@@ -101,7 +101,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .fe-loading {
   .position-wrap {

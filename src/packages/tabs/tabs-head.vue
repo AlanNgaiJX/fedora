@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/_var.scss";
+@import "../styles/_var.scss";
 
 .tabs-head {
   display: flex;

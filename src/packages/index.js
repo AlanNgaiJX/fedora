@@ -1,15 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-03-09 22:11:01
- * @LastEditTime: 2021-03-14 19:32:43
+ * @LastEditTime: 2021-03-14 21:41:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/index.js
  */
-import Button from './button.vue';
-import Icon from './icon.vue';
-import Radio from './radio.vue';
-import RadioList from './radioList.vue';
+import Button from './button/button.vue';
+import Icon from './icon/icon.vue';
+import Radio from './radio/radio.vue';
+import RadioList from './radio/radioList.vue';
 import Menu from './menu/menu.vue';
 import SubMenu from './menu/sub-menu.vue';
 import MenuItem from './menu/menu-item.vue';
@@ -31,6 +31,8 @@ import TabsPane from './tabs/tabs-pane.vue';
 import Slider from './slider/slider.vue';
 import Spin, { setGlobalSpinColor } from './spin/spin.vue';
 import ShadowShade from './shadow-shade/shadow-shade.vue';
+import './styles/animate.css';
+import './styles/iconfont';
 import Modal from './modal';
 
 const install = (Vue, { app }) => {
@@ -67,9 +69,9 @@ const install = (Vue, { app }) => {
 };
 
 // for <script>
-// if (typeof window.Vue !== 'undefined') {
-//   install(window.Vue);
-// }
+if (typeof window.Vue !== 'undefined') {
+  install(window.Vue);
+}
 
 export default {
   install,

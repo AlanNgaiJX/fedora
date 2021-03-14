@@ -77,7 +77,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .tabs-item {
   flex-shrink: 0;

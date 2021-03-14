@@ -72,7 +72,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .fe-sub-menu {
   .menu-big-title {

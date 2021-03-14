@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-11 01:48:12
+ * @LastEditTime: 2021-03-14 21:38:08
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /fedora/src/packages/radio/radioList.vue
+-->
 <template>
   <div class="fe-radio-list" :class="radioListClass">
     <fe-radio
@@ -13,13 +21,9 @@
 
 <script>
 import { defineComponent } from 'vue';
-import Radio from './radio.vue';
 
 export default defineComponent({
   name: 'fe-radio-list',
-  components: {
-    'fe-radio': Radio,
-  },
   props: {
     value: {
       type: [Number, String],

@@ -148,7 +148,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import '../../styles/_var.scss';
+@import '../styles/_var.scss';
 
 .fe-popover {
   display: inline-block;
