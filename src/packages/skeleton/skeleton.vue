@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 00:11:00
- * @LastEditTime: 2021-03-14 01:19:47
+ * @LastEditTime: 2021-03-15 20:57:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/skeleton/skeleton.vue
@@ -23,22 +23,17 @@
 export default {
   name: 'fe-skeleton',
   props: {
-    loading: {
+    loading: { // 加载状态
       type: Boolean,
       default: true,
     },
-    avatar: {
+    avatar: { // 是否含有头像框
       type: Boolean,
       default: true,
     },
-    rows: {
+    rows: { // 正文内容多少行
       type: Number,
       default: 4,
-    },
-  },
-  watch: {
-    loading(nv) {
-      console.log(nv);
     },
   },
 };

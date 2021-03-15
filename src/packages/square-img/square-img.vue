@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-13 21:15:23
- * @LastEditTime: 2021-03-14 00:06:28
+ * @LastEditTime: 2021-03-16 00:04:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/squareImg/squareImg.vue
@@ -10,10 +10,10 @@
   <div class="fe-square-img" :style="wrapStyle">
     <fe-lazy-img
       v-if="lazyLoad"
-      :style="imgStyle"
       :src="src"
       @load="handleLoad"
       @error="handleImgError"
+      :style="imgStyle"
     ></fe-lazy-img>
     <img
       v-else
@@ -27,72 +27,56 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
   name: 'fe-square-img',
   props: {
-    borderRadius: {
+    borderRadius: { // 圆角
       type: [String, Number],
       default: 0,
     },
-    backgroundColor: {
+    backgroundColor: { // 背景色
       type: String,
       default: '#fff',
     },
-    src: {
+    src: { // 图片地址
       type: String,
       require: true,
     },
-    size: {
+    size: { // 大小
       type: [String, Number],
       default: '100%',
     },
-    alt: {
+    alt: { // alt
       type: String,
       default: '',
     },
-    full: {
-      type: Boolean,
-      default: false,
+    objectFit: { // 排版模式
+      type: String,
+      default: 'cover',
+      validator: (objectFit) => ['none', 'fill', 'contain', 'cover', 'none', 'scale-down'].includes(objectFit),
     },
-    lazyLoad: {
+    lazyLoad: { // 懒加载
       type: Boolean,
       default: false,
     },
   },
   setup(props, context) {
-    const imgStyle = ref({});
     const wrapStyle = computed(() => {
       const size = props.size;
       return {
         backgroundColor: props.backgroundColor,
+        borderRadius: props.borderRadius,
         width: size.match(/\D$/) ? size : `${size}px`,
-        height: size.match(/\D$/) ? size : `${size}px`,
-        paddingBottom: 0,
       };
     });
 
-    function handleLoad(e) {
-      const { clientWidth, clientHeight } = e.target;
-      const { clientWidth: parentWidth, clientHeight: parentHeight } = e.target.parentNode;
-      const ratio = clientWidth / clientHeight;
+    const imgStyle = computed(() => ({
+      objectFit: props.objectFit,
+    }));
 
-      if (props.full) {
-        if (clientWidth >= clientHeight) {
-          imgStyle.value.width = '100%';
-          imgStyle.value.transform = 'translateY(25%)';
-        } else {
-          imgStyle.value.height = '100%';
-          imgStyle.value.transform = 'translateX(25%)';
-        }
-      } else if (clientWidth >= clientHeight) {
-        imgStyle.value.height = '100%';
-        imgStyle.value.transform = `translateX(${-(ratio * parentHeight - parentWidth) / 2}px)`;
-      } else {
-        imgStyle.value.width = '100%';
-        imgStyle.value.transform = `translateY(${-(parentWidth / ratio - parentHeight) / 2}px)`;
-      }
+    function handleLoad(e) {
       context.emit('load', e);
     }
 
@@ -101,7 +85,10 @@ export default defineComponent({
     }
 
     return {
-      handleLoad, imgStyle, wrapStyle, handleImgError,
+      wrapStyle,
+      imgStyle,
+      handleLoad,
+      handleImgError,
     };
   },
 });
@@ -109,14 +96,24 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .fe-square-img {
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  overflow: hidden;
   position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
 
   img {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 02:43:41
- * @LastEditTime: 2021-03-14 14:34:51
+ * @LastEditTime: 2021-03-15 17:07:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/slider/slider.vue
@@ -23,15 +23,15 @@ import directives from '../directives';
 export default defineComponent({
   name: 'fe-slider',
   props: {
-    value: {
+    value: { // 值
       type: Number,
       required: true,
     },
-    toFixed: {
+    toFixed: { // 精度到小数点几位
       type: Number,
       default: 3,
     },
-    disable: {
+    disable: { // 不可操作
       type: Boolean,
       default: false,
     },
@@ -47,8 +47,9 @@ export default defineComponent({
       if (props.disable) {
         return {
           width: '100%',
-          'background-color': '#000000',
+          'background-color': '#ddd',
           transition: 'width 1s',
+          cursor: 'not-allowed',
         };
       }
       return {
@@ -120,7 +121,7 @@ export default defineComponent({
           display: block;
           width: 10px;
           height: 10px;
-          background-color: black;
+          background-color: #000;
           border-radius: 50%;
           transform: translate(-40%, 0);
           border-radius: 50%;
@@ -130,7 +131,7 @@ export default defineComponent({
           display: block;
           height: 15px;
           width: 2px;
-          background-color: black;
+          background-color: #000
         }
       }
     }

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-13 22:29:27
- * @LastEditTime: 2021-03-14 00:06:38
+ * @LastEditTime: 2021-03-15 23:34:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/lazyImg/lazy-img.vue
@@ -23,29 +23,29 @@ import { defineComponent, ref, onMounted } from 'vue';
 export default defineComponent({
   name: 'fe-lazy-img',
   props: {
-    src: {
+    src: { // 图片地址
       type: String,
       require: true,
     },
-    errSrc: {
+    errSrc: { // 错误图地址
       type: String,
       default: '',
     },
-    alt: {
+    alt: { // img.alt
       type: String,
       default: '',
     },
-    root: {
+    root: { // 指定 intersection的窗口节点，请提供选择器
       type: String,
       default: '',
     },
-    rootMargin: {
+    rootMargin: { // 窗口的margin，向窗口四周扩散或收缩
       type: String,
       default: '0px 0px 0px 0px', // 'px/%'
     },
-    style: {
+    style: { // 图片样式
       type: Object,
-      default: () => ({}),
+      default: null,
     },
   },
   setup(props, context) {

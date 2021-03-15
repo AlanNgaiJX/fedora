@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 18:40:33
- * @LastEditTime: 2021-03-14 19:25:19
+ * @LastEditTime: 2021-03-16 00:20:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/spin/spin.vue
@@ -121,7 +121,7 @@ import { computed, ref } from 'vue';
 export default {
   name: 'fe-spin',
   props: {
-    type: {
+    type: { // 类型
       type: String,
       default: 'CHASE',
       validator(type) {
@@ -144,11 +144,11 @@ export default {
         );
       },
     },
-    size: {
+    size: { // 大小
       type: Number,
       default: 40, // px
     },
-    speed: {
+    speed: { // 旋转速度
       type: Number,
       default: 1,
       validator(value) {

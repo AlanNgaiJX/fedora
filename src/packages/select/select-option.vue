@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 15:53:55
- * @LastEditTime: 2021-03-12 20:54:16
+ * @LastEditTime: 2021-03-15 16:54:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/select/select.vue
@@ -24,19 +24,19 @@ import {
 export default defineComponent({
   name: 'fe-select-option',
   props: {
-    icon: {
+    icon: { // 图标
       type: String,
       default: '',
     },
-    value: {
+    value: { // 值
       type: [String, Number],
       require: true,
     },
-    default: {
+    default: { // 默认选择
       type: Boolean,
       default: false,
     },
-    disable: {
+    disable: { // 是否可选
       type: Boolean,
       default: false,
     },

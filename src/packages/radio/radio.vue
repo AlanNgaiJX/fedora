@@ -14,16 +14,16 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'fe-radio',
   props: {
-    active: {
+    active: { // 激活态
       type: Boolean,
       require: true,
       default: false,
     },
-    value: {
+    value: { // 单选值
       type: [String, Number],
       require: true,
     },
-    rect: {
+    rect: { // stroke风格
       type: Boolean,
       default: false,
     },

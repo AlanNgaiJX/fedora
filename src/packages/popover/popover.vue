@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-13 14:29:38
- * @LastEditTime: 2021-03-14 15:40:52
+ * @LastEditTime: 2021-03-15 20:26:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/popover/popover.vue
@@ -30,14 +30,14 @@ import {
 export default defineComponent({
   name: 'fe-popover',
   props: {
-    position: {
+    position: { // 弹出的方位
       type: String,
       default: 'top',
       validator(value) {
         return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0;
       },
     },
-    trigger: {
+    trigger: { // 触发方式
       type: String,
       default: 'click',
       validator(value) {

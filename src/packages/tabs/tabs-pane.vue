@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 01:34:52
- * @LastEditTime: 2021-03-14 01:35:10
+ * @LastEditTime: 2021-03-15 19:56:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/tabs/tabs-pane.vue
@@ -16,7 +16,7 @@ export default {
   name: 'fe-tabs-pane',
   inject: ['eventBus'],
   props: {
-    name: {
+    name: { // 名对应tab-item名
       type: [String, Number],
       required: true,
     },

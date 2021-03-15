@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 15:53:55
- * @LastEditTime: 2021-03-12 20:57:15
+ * @LastEditTime: 2021-03-15 16:55:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/select/select.vue
@@ -44,18 +44,18 @@ export default defineComponent({
     clickOutside: directives.clickOutside,
   },
   props: {
-    icon: {
+    icon: { // 图标
       type: String,
       default: '',
     },
-    value: {
+    value: { // 值
       type: [String, Number],
     },
-    placeholder: {
+    placeholder: { // placeholder
       type: String,
       default: '请输入',
     },
-    height: {
+    height: { // 限制高度
       type: [Number, String],
       default: 'auto',
     },
@@ -175,6 +175,8 @@ $select-height: 35px;
     box-shadow: $default-box-shadow;
     border-radius: 2px;
     overflow: auto;
+    z-index: 1;
+    position: relative;
   }
 
   &.expanded {

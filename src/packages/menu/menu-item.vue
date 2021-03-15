@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-11 21:48:12
- * @LastEditTime: 2021-03-12 15:49:03
+ * @LastEditTime: 2021-03-15 00:21:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/menu/menu-item.vue
@@ -21,8 +21,7 @@ import { getPath } from './common';
 export default defineComponent({
   name: 'fe-menu-item',
   props: {
-    // 唯一key
-    mark: {
+    mark: { // 唯一标记
       type: String,
       require: true,
     },
@@ -85,6 +84,7 @@ export default defineComponent({
   border-right: 3px solid transparent;
 
   &:hover {
+    color: $primary;
   }
 
   @for $i from 1 through 999 {

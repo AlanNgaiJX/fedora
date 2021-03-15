@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-11 01:48:12
- * @LastEditTime: 2021-03-14 21:38:08
- * @LastEditors: your name
+ * @LastEditTime: 2021-03-15 16:04:52
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/radio/radioList.vue
 -->
@@ -13,6 +13,7 @@
       :key="index + item.value"
       :active="item.value === value"
       :value="item.value"
+      :rect="rect"
       @clickRadio="handleClickRadio"
       >{{ item.text }}</fe-radio
     >
@@ -25,11 +26,15 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'fe-radio-list',
   props: {
-    value: {
+    rect: { // stroke风格
+      type: Boolean,
+      default: false,
+    },
+    value: { // 单选值
       type: [Number, String],
       require: true,
     },
-    list: {
+    list: { // 单选列表
       type: Array,
       require: true,
       defualt: [
@@ -41,7 +46,7 @@ export default defineComponent({
       [{value:0, text: 'a'},{value:1, text: 'b'}]
       */
     },
-    layout: {
+    layout: { // 排列方式
       type: String,
       default: 'row',
       validator(layout) {

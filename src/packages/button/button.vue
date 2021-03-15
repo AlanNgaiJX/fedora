@@ -2,6 +2,7 @@
   <button
     class="fe-button"
     :class="btnClass"
+    @click="handleClick"
     @mousedown="handleMousedown"
     @mouseup="handleMouseup"
     @touchstart="handleMousedown"
@@ -35,7 +36,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'fe-button',
   props: {
-    type: {
+    type: { // 颜色风格
       type: String,
       default: 'default',
       validator(type) {
@@ -48,11 +49,11 @@ export default defineComponent({
         return true;
       },
     },
-    stroke: {
+    stroke: { // 轮廓风格
       type: Boolean,
       default: false,
     },
-    shape: {
+    shape: { // 按钮形状：'default', 'round', 'rect'
       type: String,
       default: 'default',
       validator(shape) {
@@ -62,17 +63,17 @@ export default defineComponent({
         return true;
       },
     },
-    status: {
+    status: { // 按钮状态：'default', 'disable', 'loading'
       type: String,
       default: 'default',
-      validator(shape) {
-        if (shape && !['default', 'disable', 'loading'].includes(shape)) {
-          console.error('shape的类型必须为default,disable,loading');
+      validator(status) {
+        if (status && !['default', 'disable', 'loading'].includes(status)) {
+          console.error('status的类型必须为default,disable,loading');
         }
         return true;
       },
     },
-    icon: {
+    icon: { // 使用图标
       type: [Object, String],
       default: null,
       /* 可以是stirng或是一个objcet，example：
@@ -86,6 +87,10 @@ export default defineComponent({
 
       "fe-check"
       */
+    },
+    onClick: { // click事件回调
+      type: Function,
+      default: () => {},
     },
   },
   data() {
@@ -135,6 +140,12 @@ export default defineComponent({
     },
   },
   methods: {
+    handleClick() {
+      if (this.status === 'disable') {
+        return;
+      }
+      this.onClick && this.onClick();
+    },
     handleMousedown() {
       if (this.status === 'disable') {
         return;
@@ -160,7 +171,7 @@ $height: 42px;
 $font-size: 16px;
 $color: #606266;
 
-@keyframes loading {
+@keyframes isloading {
   0% {
     transform: rotate(0);
   }
@@ -200,7 +211,7 @@ $color: #606266;
   }
 
   .loading {
-    animation: loading 0.8s infinite;
+    animation: isloading 0.8s infinite;
   }
 
   // set button bg

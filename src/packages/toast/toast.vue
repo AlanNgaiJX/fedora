@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 11:32:56
- * @LastEditTime: 2021-03-14 18:31:03
+ * @LastEditTime: 2021-03-16 00:56:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/toast/toast.vue
@@ -27,21 +27,21 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'fe-toast',
   props: {
-    title: {
+    title: { // 内容
       type: String,
       require: true,
     },
-    icon: {
+    icon: { // 图标
       type: String,
     },
-    html: {
+    html: { // v-html
       type: String,
     },
-    duration: {
+    duration: { // 持续时间
       type: Number,
       default: 1.5,
     },
-    mask: {
+    mask: { // 显示遮罩
       type: Boolean,
       default: true,
     },
@@ -50,40 +50,40 @@ export default defineComponent({
       type: Function,
       require: true,
     },
-    enterAnimate: {
+    enterAnimate: { // 进入动画
       type: String,
       default: 'fadeIn',
       validate(animate) {
         return ['none', 'fadeIn', 'slideInDown', 'slideInUp'].includes('animate');
       },
     },
-    leaveAnimate: {
+    leaveAnimate: { // 离开动画
       type: String,
       default: 'fadeOut',
       validate(animate) {
         return ['none', 'fadeOut', 'slideOutDown', 'slideOutUp'].includes(animate);
       },
     },
-    animateSpeed: {
+    animateSpeed: { // 动画速度
       type: Number,
       default: 5, // 建议3~6
     },
-    position: {
+    position: { // 方位
       type: String,
       default: 'default',
       validate(position) {
         return ['default', 'top', 'middle', 'bottom'].includes(position);
       },
     },
-    background: {
+    background: { // 背景
       type: String,
       default: 'rgba(187, 187, 187, 0.872)',
     },
-    color: {
+    color: { // 颜色
       type: String,
       default: '#fff',
     },
-    maxWidth: {
+    maxWidth: { // 最大宽度
       type: [String, Number],
       default: '30%',
     },

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-09 22:11:01
- * @LastEditTime: 2021-03-14 21:41:56
+ * @LastEditTime: 2021-03-15 20:47:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/index.js
@@ -22,6 +22,7 @@ import Popover from './popover/popover.vue';
 import Bubble from './bubble/bubble.vue';
 import LazyImg from './lazy-img/lazy-img.vue';
 import SquareImg from './square-img/square-img.vue';
+import SkeletonItem from './skeleton/skeleton-item.vue';
 import Skeleton from './skeleton/skeleton.vue';
 import Tabs from './tabs/tabs.vue';
 import TabsHead from './tabs/tabs-head.vue';
@@ -52,6 +53,7 @@ const install = (Vue, { app }) => {
   Vue.component(Bubble.name, Bubble);
   Vue.component(LazyImg.name, LazyImg);
   Vue.component(SquareImg.name, SquareImg);
+  Vue.component(SkeletonItem.name, SkeletonItem);
   Vue.component(Skeleton.name, Skeleton);
   Vue.component(Tabs.name, Tabs);
   Vue.component(TabsHead.name, TabsHead);

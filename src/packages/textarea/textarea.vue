@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 22:55:42
- * @LastEditTime: 2021-03-13 14:27:18
+ * @LastEditTime: 2021-03-15 17:38:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/input/input.vue
@@ -49,58 +49,50 @@ import {
 export default defineComponent({
   name: 'fe-textarea',
   props: {
-    value: {
+    value: { // 值
       type: String,
       require: true,
     },
-    type: {
+    type: { // 类型
       type: String,
       default: 'text',
     },
-    width: {
+    width: { // 宽度
       type: [String, Number],
       default: '100%',
     },
-    placeholder: {
+    placeholder: { // placeholder
       type: String,
       default: '',
     },
-    fontSize: {
+    fontSize: { // 字体大小
       type: [String, Number],
       default: '14px',
     },
-    cancelable: {
+    cancelable: { // 可清空
       type: Boolean,
       default: false,
     },
-    validator: {
+    validator: { // 验证器
       type: Function,
       default: () => true,
     },
-    leftIcon: {
-      type: String,
-      default: '',
-    },
-    rightIcon: {
-      type: String,
-      default: '',
-    },
-    disable: {
+    disable: { // 不可输入
       type: Boolean,
       default: false,
     },
-    maxLength: {
+    maxLength: { // 限制长度
       type: [Number, String],
     },
-    count: {
+    count: { // 计数器
       type: Boolean,
       default: false,
     },
-    required: {
+    required: { // 不可为空
       type: Boolean,
       default: false,
     },
-    rows: {
+    rows: { // 行数
       type: Number,
       default: 5,
     },

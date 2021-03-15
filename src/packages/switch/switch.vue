@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 20:59:28
- * @LastEditTime: 2021-03-14 00:36:19
+ * @LastEditTime: 2021-03-15 16:53:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/switch/switch.vue
@@ -29,10 +29,10 @@ import { defineComponent, computed } from 'vue';
 export default defineComponent({
   name: 'fe-switch',
   props: {
-    value: {
+    value: { // 值
       type: [Number, String, Boolean],
     },
-    format: {
+    format: { // 版式
       type: Object,
       default() {
         return {
@@ -41,15 +41,15 @@ export default defineComponent({
         };
       },
     },
-    innerText: {
+    innerText: { // 是否内置文字
       type: Boolean,
       default: false,
     },
-    outerText: {
+    outerText: { // 是否外置文字
       type: Boolean,
       default: false,
     },
-    disable: {
+    disable: { // 是否可用
       type: Boolean,
       default: false,
     },

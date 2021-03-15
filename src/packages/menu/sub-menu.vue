@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-11 21:14:07
- * @LastEditTime: 2021-03-12 23:57:49
+ * @LastEditTime: 2021-03-15 18:01:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/menu/sub-menu.vue
@@ -24,15 +24,15 @@ import { defineComponent, computed, inject } from 'vue';
 export default defineComponent({
   name: 'fe-sub-menu',
   props: {
-    title: {
+    title: { // 标题
       type: String,
       default: '',
     },
-    mark: {
+    mark: { // 标记
       type: String,
       require: true,
     },
-    foldable: {
+    foldable: { // 是否可折叠
       type: Boolean,
       default: false,
     },

@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-14 21:45:09
+ * @LastEditTime: 2021-03-15 14:54:06
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /fedora-document/src/packages/icon/icon.vue
+-->
 <template>
   <i :class="['svg-icon', `svg-icon-${name}`, className]" :style="svgStyle">
     <svg fill="currentColor" aria-hidden="true" width="100%" height="100%">
@@ -8,24 +16,23 @@
 
 <script>
 import { defineComponent } from 'vue';
-import '../styles/iconfont';
 
 export default defineComponent({
   name: 'fe-icon',
   props: {
-    name: {
+    name: { // 图标名，如 fe-search
       type: String,
       required: true,
     },
-    className: {
+    className: { // 自定义类名
       type: String,
       default: '',
     },
-    color: {
+    color: { // 图标颜色
       type: String,
     },
     size: {
-      // 设置size，宽=高
+      // 图标大小，宽=高
       type: [Number, String],
     },
   },

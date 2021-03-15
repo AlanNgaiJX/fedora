@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-13 16:23:06
- * @LastEditTime: 2021-03-14 15:47:39
+ * @LastEditTime: 2021-03-15 20:43:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/bubble/bubble.vue
@@ -15,20 +15,24 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-} from 'vue';
+import { defineComponent } from 'vue';
 import { getPageXY } from './common';
 
 export default defineComponent({
   name: 'fe-bubble',
   props: {
-    visable: { type: Boolean, require: true },
+    visable: {
+      // bubble内容是否可见，不可见时触发动画
+      type: Boolean,
+      require: true,
+    },
     relTo: {
+      // 一个选择器，回收到哪个元素
       type: String,
       require: true,
     },
     animateDuration: {
+      // 动画持续时间
       type: Number,
       default: 1,
     },

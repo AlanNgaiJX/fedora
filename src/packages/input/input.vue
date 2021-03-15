@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 22:55:42
- * @LastEditTime: 2021-03-14 21:42:49
+ * @LastEditTime: 2021-03-15 17:34:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/input/input.vue
@@ -47,54 +47,54 @@ import {
 export default defineComponent({
   name: 'fe-input',
   props: {
-    value: {
+    value: { // 值
       type: String,
       require: true,
     },
-    type: {
+    type: { // 类型
       type: String,
       default: 'text',
     },
-    width: {
+    width: { // 宽度
       type: [String, Number],
       default: '100%',
     },
-    placeholder: {
+    placeholder: { // placeholder
       type: String,
       default: '',
     },
-    fontSize: {
+    fontSize: { // 字大小
       type: [String, Number],
       default: '14px',
     },
-    cancelable: {
+    cancelable: { // 可清空
       type: Boolean,
       default: false,
     },
-    validator: {
+    validator: { // 验证器
       type: Function,
       default: () => true,
     },
-    leftIcon: {
+    leftIcon: { // 左图标
       type: String,
       default: '',
     },
-    rightIcon: {
+    rightIcon: { // 右图标
       type: String,
       default: '',
     },
-    disable: {
+    disable: { // 不可输入
       type: Boolean,
       default: false,
     },
-    maxLength: {
+    maxLength: { // 限制长度
       type: [Number, String],
     },
-    count: {
+    count: { // 计数器
       type: Boolean,
       default: false,
     },
-    required: {
+    required: { // 不可为空
       type: Boolean,
       default: false,
     },

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-12 13:24:29
- * @LastEditTime: 2021-03-12 15:29:56
+ * @LastEditTime: 2021-03-15 18:00:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/menu/menu1.vue
@@ -21,11 +21,11 @@ import { getPath, getTarget } from './common';
 export default defineComponent({
   name: 'fe-menu',
   props: {
-    activeStyleLayer: {
+    activeStyleLayer: { // active样式最高应用到那一层菜单，-1为 unlimit
       type: Number,
       default: -1,
     },
-    width: {
+    width: { // 菜单宽度
       type: [Number, String],
       default: '100%',
     },

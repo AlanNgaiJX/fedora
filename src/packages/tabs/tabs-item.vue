@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-14 01:29:54
- * @LastEditTime: 2021-03-14 02:38:02
+ * @LastEditTime: 2021-03-15 19:57:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/tabs/tabs-item.vue
@@ -22,11 +22,11 @@ export default {
     };
   },
   props: {
-    disabled: {
+    disabled: { // 不可选中
       type: Boolean,
       default: false,
     },
-    name: {
+    name: { // tab名
       type: [String, Number],
       required: true,
     },
