@@ -3,6 +3,12 @@ node_modules
 src
 public
 tests
+packages
+lib
+package(building).json
+vue.config(building).js
+build(building)
+
 .browserslistrc
 .editorconfig
 .eslintrc.js
