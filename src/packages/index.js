@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-09 22:11:01
- * @LastEditTime: 2021-03-16 01:44:07
+ * @LastEditTime: 2021-03-16 11:24:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/index.js
@@ -65,39 +65,39 @@ export const Spin = _Spin;
 export const ShadowShade = _ShadowShade;
 export const Modal = _Modal;
 
-const install = (Vue, { app }) => {
-  Vue.component(_Button.name, _Button);
-  Vue.component(_Icon.name, _Icon);
-  Vue.component(_Radio.name, _Radio);
-  Vue.component(_RadioList.name, _RadioList);
-  Vue.component(_Menu.name, _Menu);
-  Vue.component(_SubMenu.name, _SubMenu);
-  Vue.component(_MenuItem.name, _MenuItem);
-  Vue.component(_Select.name, _Select);
-  Vue.component(_SelectOption.name, _SelectOption);
-  Vue.component(_Switch.name, _Switch);
-  Vue.component(_Input.name, _Input);
-  Vue.component(_Textarea.name, _Textarea);
-  Vue.component(_Popover.name, _Popover);
-  Vue.component(_Bubble.name, _Bubble);
-  Vue.component(_LazyImg.name, _LazyImg);
-  Vue.component(_SquareImg.name, _SquareImg);
-  Vue.component(_SkeletonItem.name, _SkeletonItem);
-  Vue.component(_Skeleton.name, _Skeleton);
-  Vue.component(_Tabs.name, _Tabs);
-  Vue.component(_TabsHead.name, _TabsHead);
-  Vue.component(_TabsBody.name, _TabsBody);
-  Vue.component(_TabsItem.name, _TabsItem);
-  Vue.component(_TabsPane.name, _TabsPane);
-  Vue.component(_Slider.name, _Slider);
-  Vue.component(_Spin.name, _Spin);
-  Vue.component(_ShadowShade.name, _ShadowShade);
-  Vue.use(_Modal, { app });
+function install(app) {
+  app.component(_Button.name, _Button);
+  app.component(_Icon.name, _Icon);
+  app.component(_Radio.name, _Radio);
+  app.component(_RadioList.name, _RadioList);
+  app.component(_Menu.name, _Menu);
+  app.component(_SubMenu.name, _SubMenu);
+  app.component(_MenuItem.name, _MenuItem);
+  app.component(_Select.name, _Select);
+  app.component(_SelectOption.name, _SelectOption);
+  app.component(_Switch.name, _Switch);
+  app.component(_Input.name, _Input);
+  app.component(_Textarea.name, _Textarea);
+  app.component(_Popover.name, _Popover);
+  app.component(_Bubble.name, _Bubble);
+  app.component(_LazyImg.name, _LazyImg);
+  app.component(_SquareImg.name, _SquareImg);
+  app.component(_SkeletonItem.name, _SkeletonItem);
+  app.component(_Skeleton.name, _Skeleton);
+  app.component(_Tabs.name, _Tabs);
+  app.component(_TabsHead.name, _TabsHead);
+  app.component(_TabsBody.name, _TabsBody);
+  app.component(_TabsItem.name, _TabsItem);
+  app.component(_TabsPane.name, _TabsPane);
+  app.component(_Slider.name, _Slider);
+  app.component(_Spin.name, _Spin);
+  app.component(_ShadowShade.name, _ShadowShade);
+  app.use(_Modal);
 
   // 暴露全局设置spin color
   app.provide('setGlobalSpinColor', setGlobalSpinColor);
   app.config.globalProperties.$setGlobalSpinColor = setGlobalSpinColor;
-};
+}
 
 // for <script>
 if (typeof window.Vue !== 'undefined') {

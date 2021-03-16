@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-14 11:42:32
- * @LastEditTime: 2021-03-14 21:39:37
+ * @LastEditTime: 2021-03-16 11:19:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fedora/src/packages/modal.js
@@ -68,7 +68,7 @@ function createLoading(props) {
 let currToastApp;
 let currLoadingApp;
 export default {
-  install(Vue, { app }) {
+  install(app) {
     // 全局配置与全局设置方法
     const toastGlobal = {
       title: '',
